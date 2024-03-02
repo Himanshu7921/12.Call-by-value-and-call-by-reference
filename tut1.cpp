@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 // Call by Reference:
-//  1.Using pointers
-//  2.Using Reference Variable
+//  1.Using pointers ----> Swap using the memory Location
+//  2.Using Reference Variable ----> Swap using Reference variable (Specifically for C++)
+
+// Function Prototype
 void swap(int a, int b);
 void swapUsingPointer(int *a, int *b);
 void swapUsingReferenceVariable(int &a, int &b);
@@ -98,3 +100,30 @@ void swapUsingReferenceVariable(int &a, int &b)
     a = b;
     b = temp;
 }
+
+// Summary of this code:
+
+// This C++ program demonstrates the concept of call by reference using pointers
+// and reference variables to swap the values of two variables. Here's a summary
+// of the code: The program defines three functions:
+
+// swap(int a, int b): This function attempts to swap the values of a and b, but
+// it does not work as expected because it swaps local copies of a and b.
+// swapUsingPointer(int *a, int *b): This function swaps the values of a and b
+// using pointers. It correctly modifies the values at the memory addresses
+// pointed to by a and b. swapUsingReferenceVariable(int &a, int &b): This
+// function swaps the values of a and b using reference variables. It provides a
+// more elegant syntax for achieving the same result as swapUsingPointer. In the
+// main function:
+
+// The program enters a loop where the user can choose between two methods of
+// swapping. Method 1 (Wrong Method) demonstrates the incorrect method of
+// swapping using swap(int a, int b). Method 2 (Correct Method) allows the user
+// to choose between swapping using pointers or reference variables. The program
+// prompts the user for input and displays the values before and after swapping.
+
+// The program continues looping until the user chooses to exit (0.Exit).
+
+// Overall, the program illustrates the difference between passing arguments by
+// value (which creates copies) and passing by reference (which allows direct
+// manipulation of the original variables).
