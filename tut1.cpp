@@ -70,15 +70,19 @@ int main()
                 cout << "Error!" << endl;
             }
         }
+
+        if (method == 0)
+        {
+            cout<<"Exiting...."<<endl;
+            break;
+        }
+
         else
         {
             cout << "Error!" << endl;
         }
 
-        if (method == 0)
-        {
-            break;
-        }
+        
     }
     return 0;
 }
